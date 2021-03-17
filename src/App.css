@@ -9,3 +9,24 @@
     width: 85vw;
     margin: auto;
 }
+
+.news--source {
+    color: black;
+    text-decoration: none;
+}
+
+.news--source:hover{
+    text-decoration: underline;
+}
+
+.news--image {
+    height: 200px;
+}
+
+/* spin loader */
+.loader {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
