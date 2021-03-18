@@ -1,12 +1,13 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import Loader from "react-spinners/ClipLoader";
-
+import Card from '../card/Card'
 const Home = () => {
-    const url = `http://newsapi.org/v2/everything?q=tesla&from=2021-02-17&sortBy=publishedAt&apiKey=${process.env.REACT_APP_API_KEY}`
+    const url = `https://newsapi.org/v2/everything?q=tesla&from=2021-02-18&sortBy=publishedAt&apiKey=${process.env.REACT_APP_API_KEY}`
     const [news, setNews] = useState([])
     const [loading, setLoading] = useState(true)
-
+    const [error, setError] = useState()
+    
     // API call for headlines
     useEffect(() => {
         setLoading(true)
@@ -14,12 +15,16 @@ const Home = () => {
         .then((res) => {
             setNews(res.data.articles)
             setLoading(false)
-            return res.data.articles
+            return res.data.articles[0]
         })
         .then((newsData) => {
-            console.log(newsData[0])
+            console.log(newsData)
         })
-        .catch(err => console.error(err))
+        .catch(err => {
+            setError(err)
+            console.log(err)
+            setLoading(false)
+        })
     }, [])
 
     return (
@@ -29,18 +34,19 @@ const Home = () => {
                 loading ? 
                 <div className="loader">
                     <Loader type="Circles" color="#00BFFF" height={80} width={80}/>
-                </div>
-                : news.map((newsItem, index) => (
-                    <React.Fragment key={index}>
-                        <hr/>
-                        <img className="news--image" src={newsItem.urlToImage} alt="" />
-                        <a href={newsItem.url} className="news--source">
-                            <h3>{newsItem.title}</h3>
-                        </a>
-                        <small>By - {newsItem.author}, At - {newsItem.publishedAt}</small>
-                        <h4>{newsItem.description}</h4>
-                    </React.Fragment>
-                ))
+                </div> : 
+                error === undefined ? 
+
+                news.map((newsItem, index) => (
+                    <Card key={index} 
+                        urlToImage={newsItem.urlToImage} 
+                        url={newsItem.url} 
+                        title={newsItem.title} 
+                        author={newsItem.author} 
+                        publishedAt={newsItem.publishedAt} 
+                        description={newsItem.description} />
+                )) 
+                : <p style={{color: 'red'}}>{JSON.stringify(error.stack)}</p>
             }
         </div>
     )
