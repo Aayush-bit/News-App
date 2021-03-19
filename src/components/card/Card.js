@@ -35,7 +35,7 @@ function ComplexGrid({urlToImage, url, title, author, publishedAt, description})
         <Grid container spacing={2}>
           <Grid item>
             <ButtonBase className={classes.image}>
-              <img className={classes.img} alt="complex" src={urlToImage} />
+              <img className={classes.img} alt="related image for the news" src={urlToImage} />
             </ButtonBase>
           </Grid>
           <Grid item xs={12} sm container>

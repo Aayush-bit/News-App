@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import Loader from "react-spinners/ClipLoader";
-import Card from '../card/Card'
-const Home = () => {
-    const url = `https://newsapi.org/v2/everything?q=tesla&from=2021-02-18&sortBy=publishedAt&apiKey=${process.env.REACT_APP_API_KEY}`
+import Card from './card/Card'
+
+const ShowArticles = ({url}) => {
     const [news, setNews] = useState([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState()
@@ -28,8 +28,7 @@ const Home = () => {
     }, [])
 
     return (
-        <div className="Home">
-            <h1>Home</h1>
+        <div className="ShowArticles">
             {
                 loading ? 
                 <div className="loader">
@@ -52,4 +51,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default ShowArticles

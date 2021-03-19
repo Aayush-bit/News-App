@@ -9,6 +9,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
 import { Link } from 'react-router-dom'
+import './LeftDrawer.css'
 
 const useStyles = makeStyles({
   list: {
@@ -40,26 +41,30 @@ function SwipeableTemporaryDrawer() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-        {/* list 1 */}
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text) => (
-          <ListItem button key={text}>
-            <ListItemText primary={text} />
+        <Link className="drawer--link" to={'/apple'} >
+          <ListItem button >
+            <ListItemText primary='Apple' />
           </ListItem>
-        ))}
-      </List>
+        </Link>
 
-      <Divider />
+        <Link className="drawer--link" to={'/science'} >
+          <ListItem button >
+            <ListItemText primary='Science' />
+          </ListItem>
+        </Link>
 
-        {/* list 2 */}
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text) => (
-            <Link to={'/abcd'} key={text} >
-                <ListItem button key={text}>
-                    <ListItemText primary='business' />
-                </ListItem>
-            </Link>
-        ))}
+        <Link className="drawer--link" to={'/tesla'} >
+          <ListItem button >
+            <ListItemText primary='Tesla' />
+          </ListItem>
+        </Link>
+
+        <Link className="drawer--link" to={'/business'} >
+          <ListItem button >
+            <ListItemText primary='Business' />
+          </ListItem>
+        </Link>
       </List>
     </div>
   );
