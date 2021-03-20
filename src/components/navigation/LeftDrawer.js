@@ -42,15 +42,21 @@ function SwipeableTemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
+        <Link className="drawer--link" to={'/'} >
+          <ListItem button >
+            <ListItemText primary='Home' />
+          </ListItem>
+        </Link>
+
         <Link className="drawer--link" to={'/apple'} >
           <ListItem button >
             <ListItemText primary='Apple' />
           </ListItem>
         </Link>
 
-        <Link className="drawer--link" to={'/science'} >
+        <Link className="drawer--link" to={'/techcrunch'} >
           <ListItem button >
-            <ListItemText primary='Science' />
+            <ListItemText primary='Tech Crunch' />
           </ListItem>
         </Link>
 
@@ -65,7 +71,14 @@ function SwipeableTemporaryDrawer() {
             <ListItemText primary='Business' />
           </ListItem>
         </Link>
+
+        <Link className="drawer--link" to={'/wallstreetjournal'} >
+          <ListItem button >
+            <ListItemText primary='Wall Street Journal' />
+          </ListItem>
+        </Link>
       </List>
+      <Divider/>
     </div>
   );
 

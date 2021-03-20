@@ -4,6 +4,8 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import LeftDrawer from './LeftDrawer';
+import { Link } from 'react-router-dom';
+import './NewsAppBar.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,7 +27,9 @@ function DenseAppBar() {
             <LeftDrawer />
           </div>
           <Typography variant="h6" color="inherit">
-            News
+            <Link className='title--link' to='/'>
+              News
+            </Link>
           </Typography>
         </Toolbar>
       </AppBar>

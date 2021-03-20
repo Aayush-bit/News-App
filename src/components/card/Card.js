@@ -5,6 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Button from '@material-ui/core/Button';
+import './Card.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
 function ComplexGrid({urlToImage, url, title, author, publishedAt, description}) {
   const classes = useStyles();
   return (
+    <div className="card-style">
     <div className={classes.root}>
       <Paper className={classes.paper}>
         <Grid container spacing={2}>
@@ -48,7 +50,7 @@ function ComplexGrid({urlToImage, url, title, author, publishedAt, description})
                   {description}
                 </Typography>
                 <Typography variant="body2" color="textSecondary">
-                  By - {author}, At - {publishedAt}
+                  By - {author}, At - {publishedAt.split('T')[0]}, {publishedAt.split('T')[1]}
                 </Typography>
               </Grid>
               <Grid item>
@@ -57,12 +59,10 @@ function ComplexGrid({urlToImage, url, title, author, publishedAt, description})
                 </Button>
               </Grid>
             </Grid>
-            {/* <Grid item>
-              <Typography variant="subtitle1">Source</Typography>
-            </Grid> */}
           </Grid>
         </Grid>
       </Paper>
+    </div>
     </div>
   );
 }

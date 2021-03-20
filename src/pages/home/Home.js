@@ -4,7 +4,7 @@ import Loader from "react-spinners/ClipLoader";
 import Card from '../../components/card/Card'
 
 const Home = () => {
-    const url = `https://newsapi.org/v2/everything?q=science&from=2021-02-19&sortBy=publishedAt&apiKey=${process.env.REACT_APP_API_KEY}`
+    const url = `https://newsapi.org/v2/everything?q=tesla&from=2021-02-20&sortBy=publishedAt&apiKey=${process.env.REACT_APP_API_KEY}`
     const [news, setNews] = useState([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState()

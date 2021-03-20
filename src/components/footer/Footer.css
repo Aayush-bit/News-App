@@ -1,0 +1,51 @@
+.Footer {
+    min-height: 40vh;
+    background: rgb(18, 18, 24);
+    color: rgb(202, 202, 202);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.column-1 {
+    grid-area: "column-1";
+}
+
+.column-2 {
+    grid-area: "column-2";
+}
+
+.align-column-content {
+    width: 50%;
+    margin: 3rem auto;
+}
+
+.footer-heading {
+    font-size: xx-large;
+    font-weight: 400;
+    padding-bottom: .5rem;
+    margin-bottom: .2rem;
+}
+
+.site-map-list {
+    list-style-type: none;
+    line-height: 1.5rem;
+}
+
+.footer-link {
+    color: rgb(202, 202, 202);
+    text-decoration: none;
+}
+.list-link:hover {
+    color: rgb(129, 129, 129);
+}
+
+.contact-developer .title {
+    font-size: larger;
+    font-weight: 450;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+.contact-developer .list {
+    list-style-type: none;
+    line-height: 1.5rem;
+}
