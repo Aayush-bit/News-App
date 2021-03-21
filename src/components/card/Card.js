@@ -11,6 +11,12 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  // typography: {
+  //   fontFamily: [
+  //     'Montserrat',
+  //     'sans-serif',
+  //   ].join(','),
+  // },
   paper: {
     padding: theme.spacing(2),
     margin: 'auto',
@@ -32,37 +38,37 @@ function ComplexGrid({urlToImage, url, title, author, publishedAt, description})
   const classes = useStyles();
   return (
     <div className="card-style">
-    <div className={classes.root}>
-      <Paper className={classes.paper}>
-        <Grid container spacing={2}>
-          <Grid item>
-            <ButtonBase className={classes.image}>
-              <img className={classes.img} alt="related image for the news" src={urlToImage} />
-            </ButtonBase>
-          </Grid>
-          <Grid item xs={12} sm container>
-            <Grid item xs container direction="column" spacing={2}>
-              <Grid item xs>
-                <Typography gutterBottom variant="subtitle1">
-                    {title}
-                </Typography>
-                <Typography variant="body2" gutterBottom>
-                  {description}
-                </Typography>
-                <Typography variant="body2" color="textSecondary">
-                  By - {author}, At - {publishedAt.split('T')[0]}, {publishedAt.split('T')[1]}
-                </Typography>
-              </Grid>
-              <Grid item>
-                <Button style={{ cursor: 'pointer' }} href={url} >
-                  Read More
-                </Button>
+      <div className={classes.root}>
+        <Paper className={classes.paper}>
+          <Grid container spacing={2}>
+            <Grid item>
+              <ButtonBase className={classes.image}>
+                <img className={classes.img} alt="related image for the news" src={urlToImage} />
+              </ButtonBase>
+            </Grid>
+            <Grid item xs={12} sm container>
+              <Grid item xs container direction="column" spacing={2}>
+                <Grid item xs>
+                  <Typography className="card-title" style={{fontFamily: 'Montserrat, serif'}, {fontSize: '1.2rem'}} gutterBottom variant="subtitle1">
+                      {title}
+                  </Typography>
+                  <Typography style={{fontFamily: 'Montserrat, serif'}} variant="body2" gutterBottom>
+                    {description}
+                  </Typography>
+                  <Typography style={{fontFamily: 'Montserrat, serif'}} variant="body2" color="textSecondary">
+                    By - {author}, At - {publishedAt.split('T')[0]}, {publishedAt.split('T')[1]}
+                  </Typography>
+                </Grid>
+                <Grid item>
+                  <Button style={{ cursor: 'pointer' }} href={url} >
+                    Read More
+                  </Button>
+                </Grid>
               </Grid>
             </Grid>
           </Grid>
-        </Grid>
-      </Paper>
-    </div>
+        </Paper>
+      </div>
     </div>
   );
 }

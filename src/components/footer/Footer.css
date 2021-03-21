@@ -42,12 +42,16 @@
 .contact-developer .title {
     font-size: larger;
     font-weight: 450;
-    margin-top: .5rem;
-    margin-bottom: .5rem;
+    margin-top: 0.5rem;
 }
 .contact-developer .list {
     list-style-type: none;
     line-height: 1.5rem;
+}
+
+.icon {
+    margin-right: .3rem;
+    transform: translate(0, .25rem);
 }
 
 @media(max-width: 500px) {

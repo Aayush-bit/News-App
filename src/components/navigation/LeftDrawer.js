@@ -87,7 +87,7 @@ function SwipeableTemporaryDrawer() {
         {['left'].map((anchor) => (
             <React.Fragment key={anchor}>
                 <Button onClick={toggleDrawer(anchor, true)}>
-                    <MenuRoundedIcon/>
+                    <MenuRoundedIcon style={{color: "white"}}/>
                 </Button>
                 <SwipeableDrawer
                     anchor={anchor}

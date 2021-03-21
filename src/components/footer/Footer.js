@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Footer.css'
+import PersonIcon from '@material-ui/icons/Person';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import TwitterIcon from '@material-ui/icons/Twitter';
 
 const Footer = () => {
     return (
@@ -16,16 +19,19 @@ const Footer = () => {
                     <ul className="list">
                         <li>
                             <a href="#" className="footer-link list-link">
+                                <PersonIcon className="icon"/> 
                                 Portfolio
                             </a>
                         </li>
                         <li>
                             <a href="#" className="footer-link list-link">
+                                <LinkedInIcon className="icon"/> 
                                 LinkedIn
                             </a>
                         </li>
                         <li>
                             <a href="#" className="footer-link list-link">
+                                    <TwitterIcon className="icon"/> 
                                 Twitter
                             </a>
                         </li>

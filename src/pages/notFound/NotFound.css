@@ -1,0 +1,20 @@
+.NotFound {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.NotFound .title {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-top: .8rem;
+    margin-bottom: 2.5rem;
+}
+
+.not-found-styling {
+    width: 75%;
+    height: 30vh;
+}
