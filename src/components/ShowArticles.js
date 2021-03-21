@@ -35,7 +35,6 @@ const ShowArticles = ({url}) => {
                     <Loader type="Circles" color="#00BFFF" height={80} width={80}/>
                 </div> : 
                 error === undefined ? 
-
                 news.map((newsItem, index) => (
                     <Card key={index} 
                         urlToImage={newsItem.urlToImage} 

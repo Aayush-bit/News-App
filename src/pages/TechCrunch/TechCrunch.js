@@ -2,10 +2,11 @@ import React from 'react'
 import ShowArticles from '../../components/ShowArticles'
 
 const TechCrunch = () => {
-    const url = `https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${process.env.REACT_APP_API_KEY}`
+    const url = process.env.REACT_APP_TECH_CRUNCH_URL
+    
     return (
         <div>
-            <h1>Tech Crunch</h1>
+            <h1 className="page-title">Tech Crunch</h1>
             <ShowArticles url={url} />
         </div>
     )

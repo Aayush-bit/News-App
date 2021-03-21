@@ -20,19 +20,21 @@ function DenseAppBar() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar variant="dense">
-          <div edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <LeftDrawer />
-          </div>
-          <Typography variant="h6" color="inherit">
-            <Link className='title--link' to='/'>
-              News
-            </Link>
-          </Typography>
-        </Toolbar>
-      </AppBar>
+    <div className="app-bar-style">
+      <div className={classes.root}>
+        <AppBar position="static">
+          <Toolbar variant="dense">
+            <div edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+              <LeftDrawer />
+            </div>
+            <Typography variant="h6" color="inherit">
+              <Link className='title--link' to='/'>
+                News
+              </Link>
+            </Typography>
+          </Toolbar>
+        </AppBar>
+      </div>
     </div>
   );
 }
