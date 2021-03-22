@@ -1,3 +1,5 @@
+// Code for each news card
+
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -11,12 +13,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
-  // typography: {
-  //   fontFamily: [
-  //     'Montserrat',
-  //     'sans-serif',
-  //   ].join(','),
-  // },
   paper: {
     padding: theme.spacing(2),
     margin: 'auto',
@@ -60,6 +56,7 @@ function ComplexGrid({urlToImage, url, title, author, publishedAt, description})
                   </Typography>
                 </Grid>
                 <Grid item>
+                  {/* Takes the user to full news */}
                   <Button style={{ cursor: 'pointer' }} href={url} >
                     Read More
                   </Button>

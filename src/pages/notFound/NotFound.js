@@ -1,3 +1,5 @@
+// If a wrong url is entered this page is rendered
+
 import React from 'react'
 import "./NotFound.css"
 

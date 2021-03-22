@@ -1,17 +1,10 @@
+/* .Footer is a grid display with 2 columns of equal width */
 .Footer {
     min-height: 40vh;
     background: rgb(18, 18, 24);
     color: rgb(202, 202, 202);
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-
-.column-1 {
-    grid-area: "column-1";
-}
-
-.column-2 {
-    grid-area: "column-2";
 }
 
 .align-column-content {
@@ -35,6 +28,7 @@
     color: rgb(202, 202, 202);
     text-decoration: none;
 }
+
 .list-link:hover {
     color: rgb(129, 129, 129);
 }
@@ -54,12 +48,15 @@
     transform: translate(0, .25rem);
 }
 
+/* responsive design for width less than 500px */
 @media(max-width: 500px) {
     .Footer {
         display: block;
         padding: 1rem;
         margin-bottom: 0;
     }   
+
+    /* .align-column-content is a flex display with flex direction column with all items aligned in center */
     .align-column-content {
         display: flex;
         height: 100%;

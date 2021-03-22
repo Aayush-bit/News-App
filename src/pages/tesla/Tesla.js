@@ -1,3 +1,5 @@
+// This page is rendered when the route is /tesla
+
 import React from 'react'
 import ShowArticles from '../../components/ShowArticles'
 

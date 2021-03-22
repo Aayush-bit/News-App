@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
+// import React, {useEffect, useState} from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Home from './pages/home/Home'
 import Apple from './pages/apple/Apple'
@@ -12,7 +13,6 @@ import NotFound from './pages/notFound/NotFound'
 
 function Routes() {
     // const [news, setNews] = useState([])
-    // const url = `http://newsapi.org/v2/everything?q=science&from=2021-02-19&sortBy=publishedAt&apiKey=${process.env.REACT_APP_API_KEY}`
     
     // useEffect(() => {
     //     axios.get(url)
@@ -36,7 +36,6 @@ function Routes() {
                 <Route exact path={'/wallstreetjournal'} component={WallStreetJournal} />
                 
                 {/* under construction */}
-
                 {/* map over the news articles and set routes and send required data as props */}
                 {/* {
                     news.forEach((newsItem, index) => {
@@ -56,6 +55,7 @@ function Routes() {
                         // )
                     })
                 } */}
+                
                 <Route path={'*'} component={NotFound} />
             </Switch>
         </div>

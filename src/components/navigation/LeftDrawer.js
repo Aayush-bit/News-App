@@ -1,3 +1,6 @@
+// Following is the code for Left Drawer which appears when the menu hamburger is clicked
+// It provides routes to other pages, so that the user can navigate
+
 import React from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
@@ -41,6 +44,7 @@ function SwipeableTemporaryDrawer() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
+      {/* providing routes for the user to navigate */}
       <List>
         <Link className="drawer--link" to={'/'} >
           <ListItem button >

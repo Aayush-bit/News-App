@@ -1,3 +1,5 @@
+// This page is rendered when the route is /wallstreetjournal
+
 import React from 'react'
 import ShowArticles from '../../components/ShowArticles'
 

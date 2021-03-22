@@ -2,7 +2,7 @@ import React from 'react'
 import ShowArticles from '../../components/ShowArticles'
 
 const Home = () => {
-    const url = process.env.REACT_APP_TECH_CRUNCH_URL
+    const url = process.env.REACT_APP_GENERAL_URL
 
     return (
         <div className="Home">

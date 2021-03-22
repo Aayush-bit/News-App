@@ -1,3 +1,5 @@
+// Code for footer section of the pages
+
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Footer.css'
@@ -8,6 +10,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 const Footer = () => {
     return (
         <div className="Footer">
+            {/* column-1 displays heading-'News'(route to home page) and developer contact */}
             <div className="column-1 align-column-content">
                 <Link 
                 className="footer-brand footer-link footer-heading" 
@@ -38,7 +41,7 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-
+            {/* column-2 displays site map (all the routes of the app) */}
             <div className="column-2 align-column-content">
                 <h3 className="footer-heading">Site Map</h3>
                 <ul className="site-map-list">
