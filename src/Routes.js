@@ -1,5 +1,4 @@
 import React from 'react'
-// import React, {useEffect, useState} from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Home from './pages/home/Home'
 import Apple from './pages/apple/Apple'
@@ -7,9 +6,7 @@ import TechCrunch from './pages/TechCrunch/TechCrunch'
 import Tesla from './pages/tesla/Tesla'
 import UsBusiness from './pages/usBusiness/UsBusiness'
 import WallStreetJournal from './pages/wallStreetJournal/WallStreetJournal'
-// import axios from 'axios'
 import NotFound from './pages/notFound/NotFound'
-// import FullNews from './components/fullNews/FullNews'
 
 function Routes() {    
     return (
