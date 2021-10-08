@@ -11,20 +11,7 @@ import WallStreetJournal from './pages/wallStreetJournal/WallStreetJournal'
 import NotFound from './pages/notFound/NotFound'
 // import FullNews from './components/fullNews/FullNews'
 
-function Routes() {
-    // const [news, setNews] = useState([])
-    
-    // useEffect(() => {
-    //     axios.get(url)
-    //     .then((res) => {
-    //         setNews(res.data.articles)
-    //         return res.data.articles[0]
-    //     })
-    //     .catch(err => {
-    //         console.log(err)
-    //     })
-    // }, [])
-    
+function Routes() {    
     return (
         <div className="Routes">
             <Switch>
@@ -33,29 +20,7 @@ function Routes() {
                 <Route exact path={'/techcrunch'} component={TechCrunch} />
                 <Route exact path={'/tesla'} component={Tesla} />
                 <Route exact path={'/business'} component={UsBusiness} />
-                <Route exact path={'/wallstreetjournal'} component={WallStreetJournal} />
-                
-                {/* under construction */}
-                {/* map over the news articles and set routes and send required data as props */}
-                {/* {
-                    news.forEach((newsItem, index) => {
-                        // const link = encodeURIComponent(`${newsItem.title}/${newsItem.publishedAt.split('T')[0]}`);
-                        // const title = encodeURIComponent(newsItem.title);
-                        // console.log(`/${link}`)
-                        // console.log(`/?title=${title}&date=${newsItem.publishedAt.split('T')[0]}`)
-                        // return (
-                        //     <Route exact path={ `/${link}` } key={index} >
-                        //         <FullNews />
-                        //     </Route>
-                        // )
-                        // return (
-                        //     <Route exact path={ `?title=${title}&date=${newsItem.publishedAt.split('T')[0]}` } key={index} >
-                        //         <FullNews />
-                        //     </Route>
-                        // )
-                    })
-                } */}
-                
+                <Route exact path={'/wallstreetjournal'} component={WallStreetJournal} />                
                 <Route path={'*'} component={NotFound} />
             </Switch>
         </div>
