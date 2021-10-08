@@ -6,7 +6,7 @@ const UsBussiness = () => {
     const url = process.env.REACT_APP_BUSINESS_URL
     return (
         <div>
-            <h1 className="page-title">Bussiness news</h1>
+            <h1 className="page-title">Business news</h1>
             <ShowArticles url={url} />
         </div>
     )
